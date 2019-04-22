@@ -1,13 +1,82 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8"/>
-    <title><%= htmlWebpackPlugin.options.title %></title>
-    <style>
-			body { margin: 0; overscroll-behavior: contain; }
-      canvas { display: block; }
-		</style>
-  </head>
-  <body>
-  </body>
+
+<head>
+  <meta charset="utf-8" />
+  <title>
+    <%= htmlWebpackPlugin.options.title %>
+  </title>
+  <style>
+    body {
+      margin: 0;
+      overscroll-behavior: contain;
+    }
+
+    canvas {
+      display: block;
+    }
+
+    #scene1 {
+      position: absolute;
+      top: 2rem;
+      left: 2rem;
+      background-color: transparent;
+      border: 1px solid black;
+      color: black;
+      padding: 0.5rem 1rem;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      cursor: pointer;
+    }
+
+    #scene2 {
+      position: absolute;
+      top: 2rem;
+      left: 8rem;
+      background-color: transparent;
+      border: 1px solid black;
+      color: black;
+      padding: 0.5rem 1rem;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      cursor: pointer;
+    }
+
+    #scene1:hover,
+    #scene2:hover {
+      background-color: black;
+      color: white;
+    }
+
+    .text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: white;
+      width: 15rem;
+      text-align: center;
+      display: none;
+      padding: 1rem;
+      font-family: Arial;
+      border: 2px solid black;
+    }
+    
+  </style>
+</head>
+
+<body>
+
+  <button id="scene1">scene1</button>
+  <button id="scene2">scene2</button>
+
+  <div class="text">
+    <b><p>DID YOU KNOW?</p></b>
+    <p class="innerText"></p>
+  </div>
+
+</body>
+
 </html>
